@@ -29,7 +29,7 @@ public class ArticleServiceRestConnectorProvider {
     }
 
     @PostMapping("/article/{articleId}/")
-    public Article updateArticle(@PathVariable("articleId") UUID articleId, Article article) {
+    public Article updateArticle(@PathVariable("articleId") UUID articleId, @RequestBody Article article) {
         article.setArticleId(articleId);
 
         return articleService.upsertArticle(article);

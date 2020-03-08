@@ -35,11 +35,11 @@ public class ArticleServiceTest {
     public void getAll() {
         Article article = this.createArticle();
 
-        assertEquals(0, articleRepository.count());
+        long count = articleRepository.count();
 
         articleService.upsertArticle(article);
 
-        assertEquals(1, articleRepository.count());
+        assertEquals(count+1, articleRepository.count());
     }
 
     @org.junit.Test
