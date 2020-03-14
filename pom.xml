@@ -36,6 +36,9 @@
                         </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <mainClass>de.leuphana.articleservice.component.behaviour.ArticleService</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
